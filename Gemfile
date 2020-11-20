@@ -2,5 +2,5 @@
 
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in iwoca.gemspec
+# Specify your gem's dependencies in youlend.gemspec
 gemspec

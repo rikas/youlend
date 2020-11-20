@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Youlend API wrapper'
   spec.description   = spec.summary
-  spec.homepage      = 'https://www.iwoca.com'
+  spec.homepage      = 'https://youlend.com/'
 
   spec.metadata['homepage_uri'] = spec.homepage
 
