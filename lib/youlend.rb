@@ -5,6 +5,7 @@ require 'youlend/auth'
 require 'youlend/configuration'
 require 'youlend/connection'
 require 'youlend/quote'
+require 'youlend/lead'
 
 module Youlend
   module_function

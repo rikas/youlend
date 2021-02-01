@@ -12,16 +12,15 @@ module Youlend
       @http_response = http_response
     end
 
-    # TODO: how to get the errors?
-    def errors
-    end
-
     def unauthorized?
       status == 401
     end
 
     def token_expired?
       auth_header = @http_response.headers['www-authenticate']
+
+      return false unless auth_header
+
       auth_header.match?(/.*token is expired.*/)
     end
   end

@@ -4,28 +4,35 @@ require 'faker'
 
 module Youlend
   class MerchantGenerator
-    def self.generate(params = {})
-      new(params).generate
+    def self.generate
+      new.generate
     end
 
-
-    def initialize(params = {})
+    def initialize
       Faker::Config.locale = 'en-GB'
 
       generate
     end
 
+    # Mandatory fields:
+    # * CompanyName
+    # * CompanyType (ltd, plc, llp, dac, partnership, soleTrader, aps, as, ks, ivs and is)
+    # * CompanyNumber
+    # * FinancialData
+    # * CountryISOCode (GBR, DNK and IRE)
+    # * LoanCurrencyISOCode (ISO 4217 currency code. Valid codes are GBP, EUR and DKK)
+    # * ThirdPartyMerchantId
     def generate
       {
-        thirdPartyMerchantId: SecureRandom.uuid,
         companyName: 'HOKO LTD',
-        companyNumber: '09525857',
         companyType: 'ltd',
-        contactEmailAddress: 'oterosantos@gmail.com',
+        companyNumber: '09525857',
+        financialData: financial_data,
         countryISOCode: 'GBR',
         loanCurrencyISOCode: 'GBP',
-        financialData: financial_data,
-        significantPersons: [significant_person]
+        thirdPartyMerchantId: SecureRandom.uuid,
+        significantPersons: [significant_person],     # optional
+        contactEmailAddress: 'oterosantos@gmail.com'  # optional
       }
     end
 
@@ -42,8 +49,10 @@ module Youlend
 
     def payment_data
       (1..12).to_a.map do |month|
+        formatted_month = format('%02<month>d', month: month)
+
         {
-          paymentDate: "#{Date.today.year - 1}-#{sprintf("%02d", month)}-01",
+          paymentDate: "#{Date.today.year - 1}-#{formatted_month}-01",
           amount: 5000,
           currencyISOCode: 'GBP'
         }

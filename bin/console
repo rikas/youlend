@@ -4,6 +4,7 @@
 require 'bundler/setup'
 require 'youlend'
 require 'youlend/merchant_generator'
+require 'youlend/lead_generator'
 
 require 'dotenv'
 Dotenv.load
@@ -12,6 +13,14 @@ Youlend.configure do |config|
   config.client_id = ENV['YOULEND_CLIENT_ID']
   config.client_secret = ENV['YOULEND_CLIENT_SECRET']
   config.debug = true
+end
+
+def generate_merchant
+  Youlend::MerchantGenerator.generate
+end
+
+def generate_lead
+  Youlend::LeadGenerator.generate
 end
 
 require 'pry'

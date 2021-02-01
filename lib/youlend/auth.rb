@@ -10,30 +10,36 @@ module Youlend
     extend Forwardable
 
     AUTH_URL = 'https://youlend-stag.eu.auth0.com'
+    AUDIENCE_URL = 'https://staging.youlendapi.com/'
+
+    AUDIENCES = %i[prequalification onboarding].freeze
+    DEFAULT_AUDIENCE = :prequalification
 
     def_delegators :@configuration, :client_id, :client_secret
 
-    def initialize(access_type: nil, scopes: nil)
+    def initialize
       @configuration = Youlend.configuration
     end
 
-    def self.request_token
-      new.request_token
+    def self.request_token(audience = DEFAULT_AUDIENCE)
+      new.request_token(audience)
     end
 
-    def request_token
+    def request_token(audience = DEFAULT_AUDIENCE)
+      raise 'Invalid Audience' unless AUDIENCES.include?(audience.to_sym)
+
       params = {
         grant_type: 'client_credentials',
         client_id: client_id,
         client_secret: client_secret,
-        audience: 'https://staging.youlendapi.com/prequalification'
+        audience: "#{AUDIENCE_URL}#{audience}"
       }
 
       result = adapter.post('/oauth/token', params.to_json)
 
       json = result.body
 
-      @configuration.token = json[:access_token] if !json[:error]
+      @configuration.tokens[audience] = json[:access_token] unless json[:error]
     end
 
     def adapter

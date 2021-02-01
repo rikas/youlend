@@ -12,7 +12,7 @@ module Youlend
   class Connection
     BASE_PATH = '/'
 
-    def with_token_refresh
+    def with_token_refresh(audience)
       http_response = yield
 
       response = Response.new(http_response)
@@ -20,9 +20,9 @@ module Youlend
       # Try to get a valid token if the token has expired. This will also update the gem config
       # so we won't need to request the token again.
       if response.token_expired? || response.unauthorized?
-        log "Refreshing outdated token... #{Youlend.configuration.token}"
+        log "Refreshing outdated token... #{Youlend.configuration.tokens[audience]}"
 
-        Auth.request_token
+        Auth.request_token(audience)
 
         http_response = yield
       end
@@ -30,10 +30,11 @@ module Youlend
       http_response
     end
 
-    def post(path, params = {})
+    def post(path, audience, params = {})
       log "POST: #{params.inspect}"
-      http_response = with_token_refresh do
-        adapter.post(PathSanitizer.sanitize(path), params.to_json)
+
+      http_response = with_token_refresh(audience) do
+        adapter(audience).post(PathSanitizer.sanitize(path), params.to_json)
       end
 
       Response.new(http_response)
@@ -51,8 +52,8 @@ module Youlend
       Addressable::URI.join(Youlend.configuration.api_domain, BASE_PATH).to_s
     end
 
-    def adapter
-      token = Youlend.configuration.token
+    def adapter(audience)
+      token = Youlend.configuration.tokens[audience]
 
       Faraday.new(url: base_url) do |conn|
         conn.headers['Authorization'] = "Bearer #{token}" unless token.to_s.empty?
