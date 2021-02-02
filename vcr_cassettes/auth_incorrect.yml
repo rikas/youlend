@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://youlend-stag.eu.auth0.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials","client_id":"test","client_secret":null,"audience":"/prequalification"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 02 Feb 2021 13:30:34 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '60'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cf_bm=b86d644328e734a89744d6ab0c5ab572c0111eb1-1612272634-1800-AcGEpbRAnosUxswpSXM+JAqOBtuUgVfOzH1IugvEMHcHIsTDjoQ1XXEiXASfhswbTP1gXQLtpq79QNhCRMd3i88=;
+        path=/; expires=Tue, 02-Feb-21 14:00:34 GMT; domain=.eu.auth0.com; HttpOnly;
+        Secure; SameSite=None
+      - __cfduid=db76a7c8db86f5fd148669281a4fd0fca1612272634; expires=Thu, 04-Mar-21
+        13:30:34 GMT; path=/; domain=.eu.auth0.com; HttpOnly; SameSite=Lax; Secure
+      - did=s%3Av0%3Ad446bdc0-655a-11eb-9745-d92175d2cd95.IicDICUYKjaHmwetynHVcGPlmOwmulS%2BU6pKfHrGcvE;
+        Max-Age=31557600; Path=/; Expires=Wed, 02 Feb 2022 19:30:34 GMT; HttpOnly;
+        Secure; SameSite=None
+      - did_compat=s%3Av0%3Ad446bdc0-655a-11eb-9745-d92175d2cd95.IicDICUYKjaHmwetynHVcGPlmOwmulS%2BU6pKfHrGcvE;
+        Max-Age=31557600; Path=/; Expires=Wed, 02 Feb 2022 19:30:34 GMT; HttpOnly;
+        Secure
+      Cf-Ray:
+      - 61b4447ece99da6a-LIS
+      Cache-Control:
+      - private, no-store, no-cache, must-revalidate, post-check=0, pre-check=0, no-transform
+      Strict-Transport-Security:
+      - max-age=31536000
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '080489233a0000da6ab2a8b000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Ot-Baggage-Auth0-Request-Id:
+      - 61b4447ece99da6a
+      Ot-Tracer-Sampled:
+      - 'true'
+      Ot-Tracer-Spanid:
+      - 7ca1b23302f70745
+      Ot-Tracer-Traceid:
+      - 4774272523010f8a
+      X-Auth0-Requestid:
+      - 9105d826c668167fdfd4
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '29'
+      X-Ratelimit-Reset:
+      - '1612272635'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"error":"access_denied","error_description":"Unauthorized"}'
+    http_version:
+  recorded_at: Tue, 02 Feb 2021 13:30:34 GMT
+recorded_with: VCR 5.0.0

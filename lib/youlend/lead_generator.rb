@@ -16,7 +16,7 @@ module Youlend
 
     # Mandatory fields:
     # * CompanyName
-    # * CompanyType (ltd, plc, llp, dac, soleTrader, aps, as, ks, ivs, is and enkeltmandsvirksomhed)
+    # * CompanyType (ltd, plc, llp, dac, soleTrader, aps, as, ks, ivs and is)
     # * MonthsTrading
     # * CountryISOCode (GBR, DNK and IRE)
     # * KeyContactName

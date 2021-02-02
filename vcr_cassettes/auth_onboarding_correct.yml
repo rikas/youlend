@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://youlend-stag.eu.auth0.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials","client_id":"<CLIENT_ID>","client_secret":"<CLIENT_SECRET>","audience":"https://staging.youlendapi.com/onboarding"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Feb 2021 13:24:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cf_bm=e6a4378af86d22825e034680d08e42422cad86a0-1612272297-1800-AcsFVk6Zv0PJF3XHlWZ8G77qJ8cvjPf6Aku6MvwFjMinViAvIKbeV3urOJ3KxhRsxRt1g/woJ0OywLZhWe4Smkw=;
+        path=/; expires=Tue, 02-Feb-21 13:54:57 GMT; domain=.eu.auth0.com; HttpOnly;
+        Secure; SameSite=None
+      - __cfduid=d0401db464e44077ae99de37e2a271a0f1612272296; expires=Thu, 04-Mar-21
+        13:24:56 GMT; path=/; domain=.eu.auth0.com; HttpOnly; SameSite=Lax; Secure
+      - did=s%3Av0%3A0af87850-655a-11eb-98e7-893d431ee561.a4UtjYsy2su3wNuzKHvF5c6FwubT%2Bdtr3hwRaI1cK%2F4;
+        Max-Age=31557600; Path=/; Expires=Wed, 02 Feb 2022 19:24:57 GMT; HttpOnly;
+        Secure; SameSite=None
+      - did_compat=s%3Av0%3A0af87850-655a-11eb-98e7-893d431ee561.a4UtjYsy2su3wNuzKHvF5c6FwubT%2Bdtr3hwRaI1cK%2F4;
+        Max-Age=31557600; Path=/; Expires=Wed, 02 Feb 2022 19:24:57 GMT; HttpOnly;
+        Secure
+      Cf-Ray:
+      - 61b43c400c3d5d43-LIS
+      Cache-Control:
+      - no-store
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '080483fc0a00005d43a9a02000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Ot-Baggage-Auth0-Request-Id:
+      - 61b43c400c3d5d43
+      Ot-Tracer-Sampled:
+      - 'true'
+      Ot-Tracer-Spanid:
+      - 1176407e7e758d00
+      Ot-Tracer-Traceid:
+      - 3f5af5df1055e780
+      Pragma:
+      - no-cache
+      X-Auth0-Requestid:
+      - 770c64fa80205df8e5b4
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '29'
+      X-Ratelimit-Reset:
+      - '1612272298'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9vbmJvYXJkaW5nIiwiaWF0IjoxNjEyMjcyMjk3LCJleHAiOjE2MTIzNTg2OTcsImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.lcYAhbXgtTnOBE528d5mPu7CD_FUefSnRwIK9u1rdg-CcRCflLmesALTJjS-VbE0kotT_PAU9n2CuLAbsK3XbORkg8doxKZG_1mNeSxuqCYrcd-nOPtxnKUXuRrCIZoogzmt9gt350skue_6YSKVjqeqeGetzyOdoitiJEms2rkuzMqkfNlTqouXKjYKHFIG6tUg4oBUlrvjwDvAXaLmZIyxpSkihrqCG2_5cvzrmtZmffwJvFtPVYKyufgtZm66NIPiitw_NfTtcU1ZggPBgJyjjGJKL6XD--mJqoaGEzWUncyJEOuONmqm_m_H0LuCfb5OQMLkDbQuqo_fwsixfA","expires_in":86400,"token_type":"Bearer"}'
+    http_version:
+  recorded_at: Tue, 02 Feb 2021 13:24:57 GMT
+recorded_with: VCR 5.0.0

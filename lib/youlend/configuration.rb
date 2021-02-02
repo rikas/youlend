@@ -13,7 +13,7 @@ module Youlend
     def initialize
       @tokens = { onboarding: '', prequalification: '' }
       @webhook_signature = ''
-      @env = defined?(Rails) ? Rails.env : :development
+      @env = defined?(::Rails) ? ::Rails.env : :development
       @debug = false
     end
 

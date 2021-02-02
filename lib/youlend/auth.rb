@@ -10,7 +10,6 @@ module Youlend
     extend Forwardable
 
     AUTH_URL = 'https://youlend-stag.eu.auth0.com'
-    AUDIENCE_URL = 'https://staging.youlendapi.com/'
 
     AUDIENCES = %i[prequalification onboarding].freeze
     DEFAULT_AUDIENCE = :prequalification
@@ -32,15 +31,19 @@ module Youlend
         grant_type: 'client_credentials',
         client_id: client_id,
         client_secret: client_secret,
-        audience: "#{AUDIENCE_URL}#{audience}"
+        audience: "#{Youlend.configuration.api_domain}/#{audience}"
       }
 
       result = adapter.post('/oauth/token', params.to_json)
 
       json = result.body
 
+      raise json[:error_description] if json[:error]
+
       @configuration.tokens[audience] = json[:access_token] unless json[:error]
     end
+
+    private
 
     def adapter
       Faraday.new(url: AUTH_URL) do |conn|

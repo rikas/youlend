@@ -9,8 +9,7 @@ module Youlend
     end
 
     def create
-      response = Youlend.connection.post('/onboarding/Leads', :onboarding, @params)
-      response
+      Youlend.connection.post('/onboarding/Leads', :onboarding, @params)
     end
 
     def self.create(params)
@@ -18,7 +17,7 @@ module Youlend
     end
 
     def self.details(lead_id)
-      response = Youlend.connection.get("/onboarding/Leads/#{lead_id}/details", :onboarding)
+      Youlend.connection.get("/onboarding/Leads/#{lead_id}/details", :onboarding)
     end
   end
 end

@@ -1,0 +1,170 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://staging.youlendapi.com/onboarding/Leads/
+    body:
+      encoding: UTF-8
+      string: '{"companyName":"HOKO LTD","companyType":"ltd","monthsTrading":6,"countryISOCode":"GBR","keyContactName":"Reta
+        Senger V","thirdPartyLeadId":"9d2da035-c4d3-43e9-8a95-f40a59f43b00","registeredAddress":{"line1":"95792
+        Jimmy Plain","line2":"Suite 201","city":"London","region":"London","areaCode":"Z6
+        1LG","country":"UK"},"contactPhoneNumber":"0800 613 2789","monthlyCardRevenue":10000,"contactEmailAddress":"rosalie@walter.co","loanCurrencyISOCode":"GBP","thirdPartyCustomerId":"de3014f5-5e42-46f0-b7c4-a0af7a18769b","companyNumber":"09525857","notificationURL":"http://bashirian.org/lavern_baumbach","thirdPartyMerchantId":"ac916aac-0ee6-4df6-9a92-79bb5c583ee2"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 02 Feb 2021 13:41:59 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      Www-Authenticate:
+      - Bearer
+      X-Powered-By:
+      - ASP.NET
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Tue, 02 Feb 2021 13:41:59 GMT
+- request:
+    method: post
+    uri: https://youlend-stag.eu.auth0.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials","client_id":"<CLIENT_ID>","client_secret":"<CLIENT_SECRET>","audience":"https://staging.youlendapi.com/onboarding"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Feb 2021 13:41:59 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cf_bm=80325795f5e4284c1d439cbe042a090dae2ecdcf-1612273319-1800-AR+78jnMe7/dhxc4GM4bOVuGZFdvTd3j6+pcgsxH8Kfncad9qAr64i4IGS3pv+MAva9uXMtj9QLQyzVXz3PXDSw=;
+        path=/; expires=Tue, 02-Feb-21 14:11:59 GMT; domain=.eu.auth0.com; HttpOnly;
+        Secure; SameSite=None
+      - __cfduid=d92e2fea4eea4a2e84701600eb3ec3c611612273319; expires=Thu, 04-Mar-21
+        13:41:59 GMT; path=/; domain=.eu.auth0.com; HttpOnly; SameSite=Lax; Secure
+      - did=s%3Av0%3A6c84a100-655c-11eb-8d10-33d3d6fc6471.Kdh3t06XUDZxEOxdk9OFK%2Bv0J17CVFQkPJ8Yf0jed7E;
+        Max-Age=31557600; Path=/; Expires=Wed, 02 Feb 2022 19:41:59 GMT; HttpOnly;
+        Secure; SameSite=None
+      - did_compat=s%3Av0%3A6c84a100-655c-11eb-8d10-33d3d6fc6471.Kdh3t06XUDZxEOxdk9OFK%2Bv0J17CVFQkPJ8Yf0jed7E;
+        Max-Age=31557600; Path=/; Expires=Wed, 02 Feb 2022 19:41:59 GMT; HttpOnly;
+        Secure
+      Cf-Ray:
+      - 61b45537ce32da72-LIS
+      Cache-Control:
+      - no-store
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '08049396da0000da7280b5d000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Ot-Baggage-Auth0-Request-Id:
+      - 61b45537ce32da72
+      Ot-Tracer-Sampled:
+      - 'true'
+      Ot-Tracer-Spanid:
+      - 3becbfdc5aa6fe2b
+      Ot-Tracer-Traceid:
+      - 5cdc59c075a04b64
+      Pragma:
+      - no-cache
+      X-Auth0-Requestid:
+      - b75baa9043a1e5e998a0
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '29'
+      X-Ratelimit-Reset:
+      - '1612273320'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9vbmJvYXJkaW5nIiwiaWF0IjoxNjEyMjczMzE5LCJleHAiOjE2MTIzNTk3MTksImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.srrjdfyFGNh9XULhEvSKOFP7aQPCPN7miNj1XPEGW0tu74LZU6wPpi0zd_2hFvovrYlDl_DgX5yAr3kjx4FgnLYRA5EJlWV8v_eWwuKF7Tl0dRFnZWSnsBWIbKiXgaEGww_DPj3FP3iBtPPIG5fd7oCdnrJzz8BxBsXzr6s2EGGU99I_hV2jZECv27GeCGqi8D2KRaSnGTVrZ63IYNXYOtPqTeUgc1DYu8CyvHDgQE6hF1HGKD_lsNzXPBXurX6Xl1QDy8Sl_Qjcj2_1Y-4nMbpim9J1tz5ZnsZvPz9wwn3TbheLdILznn0huWR46pZJVmWLHmeHr8kr0gih2msywg","expires_in":86400,"token_type":"Bearer"}'
+    http_version:
+  recorded_at: Tue, 02 Feb 2021 13:41:59 GMT
+- request:
+    method: post
+    uri: https://staging.youlendapi.com/onboarding/Leads/
+    body:
+      encoding: UTF-8
+      string: '{"companyName":"HOKO LTD","companyType":"ltd","monthsTrading":6,"countryISOCode":"GBR","keyContactName":"Reta
+        Senger V","thirdPartyLeadId":"9d2da035-c4d3-43e9-8a95-f40a59f43b00","registeredAddress":{"line1":"95792
+        Jimmy Plain","line2":"Suite 201","city":"London","region":"London","areaCode":"Z6
+        1LG","country":"UK"},"contactPhoneNumber":"0800 613 2789","monthlyCardRevenue":10000,"contactEmailAddress":"rosalie@walter.co","loanCurrencyISOCode":"GBP","thirdPartyCustomerId":"de3014f5-5e42-46f0-b7c4-a0af7a18769b","companyNumber":"09525857","notificationURL":"http://bashirian.org/lavern_baumbach","thirdPartyMerchantId":"ac916aac-0ee6-4df6-9a92-79bb5c583ee2"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9vbmJvYXJkaW5nIiwiaWF0IjoxNjEyMjczMzE5LCJleHAiOjE2MTIzNTk3MTksImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.srrjdfyFGNh9XULhEvSKOFP7aQPCPN7miNj1XPEGW0tu74LZU6wPpi0zd_2hFvovrYlDl_DgX5yAr3kjx4FgnLYRA5EJlWV8v_eWwuKF7Tl0dRFnZWSnsBWIbKiXgaEGww_DPj3FP3iBtPPIG5fd7oCdnrJzz8BxBsXzr6s2EGGU99I_hV2jZECv27GeCGqi8D2KRaSnGTVrZ63IYNXYOtPqTeUgc1DYu8CyvHDgQE6hF1HGKD_lsNzXPBXurX6Xl1QDy8Sl_Qjcj2_1Y-4nMbpim9J1tz5ZnsZvPz9wwn3TbheLdILznn0huWR46pZJVmWLHmeHr8kr0gih2msywg
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Api-Supported-Versions:
+      - '1.0'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 02 Feb 2021 13:42:00 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"leadId":"99687dc3-f7be-44e0-8808-a2828b15fc41","leadURL":"https://staging.youlend.com/dashboard/youraccount/99687dc3-f7be-44e0-8808-a2828b15fc41/companydetails","signUpURL":"https://staging.youlend.com/dashboard/youlendapisignup?emailAddress=rosalie%40walter.co&leadId=99687dc3-f7be-44e0-8808-a2828b15fc41"}'
+    http_version:
+  recorded_at: Tue, 02 Feb 2021 13:42:00 GMT
+recorded_with: VCR 5.0.0
