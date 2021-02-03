@@ -6,6 +6,7 @@ module Youlend
   class Response
     extend Forwardable
 
+    attr_reader :http_response
     def_delegators :@http_response, :headers, :body, :status, :success?
 
     def initialize(http_response)

@@ -1,0 +1,169 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://staging.youlendapi.com/prequalification/Requests/
+    body:
+      encoding: UTF-8
+      string: '{"companyName":"Test company","companyType":"ltd","companyNumber":"09525857","financialData":{"monthlyCardRevenue":0,"monthlyValueOfPurchaseTransactions":0,"monthlyRevenueFromInvoices":0,"paymentData":[{"paymentDate":"2020-01-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-02-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-03-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-04-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-05-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-06-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-07-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-08-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-09-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-10-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-11-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-12-01","amount":5000,"currencyISOCode":"GBP"}]},"countryISOCode":"GBR","loanCurrencyISOCode":"GBP","thirdPartyMerchantId":"b97b0834-74e5-4da6-a3df-c8dbe017fe09","significantPersons":[{"firstName":"Jarrett","surname":"Hauck","address":{"line1":"95590
+        Nolan Ridge","line2":"Suite 597","city":"London","region":"London","areaCode":"A3G
+        0SL","country":"UK"},"dateOfBirth":"1980-01-01"}],"contactEmailAddress":"oterosantos@gmail.com"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 02 Feb 2021 16:57:56 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      Www-Authenticate:
+      - Bearer
+      X-Powered-By:
+      - ASP.NET
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Tue, 02 Feb 2021 16:57:57 GMT
+- request:
+    method: post
+    uri: https://youlend-stag.eu.auth0.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials","client_id":"<CLIENT_ID>","client_secret":"<CLIENT_SECRET>","audience":"https://staging.youlendapi.com/prequalification"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 02 Feb 2021 16:57:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cf_bm=aad179c3f5d6fb3f39ef0615e11e6e666242df9f-1612285077-1800-Aad3BY9UYvZdElUVfmiijTjYefxpcoXzxJBnkSXHGsz8ZQcOv3Z4X+0aUxDNyC34FyhQfD8subLB3xYfNbnZSY0=;
+        path=/; expires=Tue, 02-Feb-21 17:27:57 GMT; domain=.eu.auth0.com; HttpOnly;
+        Secure; SameSite=None
+      - __cfduid=d0f7c4e244e4e7c17a329125e60a45ad71612285077; expires=Thu, 04-Mar-21
+        16:57:57 GMT; path=/; domain=.eu.auth0.com; HttpOnly; SameSite=Lax; Secure
+      - did=s%3Av0%3Acc9bac80-6577-11eb-b513-af686525a903.RefjK2nt71PxQlLEQe0rpKlmKXlAxcV%2FLvF7T0ebDug;
+        Max-Age=31557600; Path=/; Expires=Wed, 02 Feb 2022 22:57:57 GMT; HttpOnly;
+        Secure; SameSite=None
+      - did_compat=s%3Av0%3Acc9bac80-6577-11eb-b513-af686525a903.RefjK2nt71PxQlLEQe0rpKlmKXlAxcV%2FLvF7T0ebDug;
+        Max-Age=31557600; Path=/; Expires=Wed, 02 Feb 2022 22:57:57 GMT; HttpOnly;
+        Secure
+      Cf-Ray:
+      - 61b574443a835d43-LIS
+      Cache-Control:
+      - no-store
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Request-Id:
+      - '080546fea100005d439a8d2000000001'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Ot-Baggage-Auth0-Request-Id:
+      - 61b574443a835d43
+      Ot-Tracer-Sampled:
+      - 'true'
+      Ot-Tracer-Spanid:
+      - 4d2824056702a667
+      Ot-Tracer-Traceid:
+      - 52f88ab31e0c676a
+      Pragma:
+      - no-cache
+      X-Auth0-Requestid:
+      - cbe70d28be5440b9dc2d
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '29'
+      X-Ratelimit-Reset:
+      - '1612285078'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9wcmVxdWFsaWZpY2F0aW9uIiwiaWF0IjoxNjEyMjg1MDc3LCJleHAiOjE2MTIzNzE0NzcsImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.QuF9CeXZk0Bt6mgq6YoLkM43kxL26hc1ybyEmLiLL1hD7BXhhPrNQltmNxyb0vDO088VkA3_BPs64yKX_HjquwtcXhy83Rpv5hWS8ETMdPnTchxH0Vy7Cc6nGxB-48NoFBbyD-HS_wEL6V5_KFf_e-_M_pOxTsf9ubR76eNi309jYy4aS7SCheTz6p_0ro6m12ILyYhR8EXSgtxI_OgGITdbHqk8nql1BdnPCEaaZ5GkRvZaOBSEooNai3YxcuZQkTTh_UkGIVNCA-VzPxNai62iiNWb1DiFRQOZCvSp7yNos4yZvbWo44QO8jPslWuc9Taw-jpoLykvlR0vlXYhhQ","expires_in":86400,"token_type":"Bearer"}'
+    http_version:
+  recorded_at: Tue, 02 Feb 2021 16:57:57 GMT
+- request:
+    method: post
+    uri: https://staging.youlendapi.com/prequalification/Requests/
+    body:
+      encoding: UTF-8
+      string: '{"companyName":"Test company","companyType":"ltd","companyNumber":"09525857","financialData":{"monthlyCardRevenue":0,"monthlyValueOfPurchaseTransactions":0,"monthlyRevenueFromInvoices":0,"paymentData":[{"paymentDate":"2020-01-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-02-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-03-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-04-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-05-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-06-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-07-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-08-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-09-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-10-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-11-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-12-01","amount":5000,"currencyISOCode":"GBP"}]},"countryISOCode":"GBR","loanCurrencyISOCode":"GBP","thirdPartyMerchantId":"b97b0834-74e5-4da6-a3df-c8dbe017fe09","significantPersons":[{"firstName":"Jarrett","surname":"Hauck","address":{"line1":"95590
+        Nolan Ridge","line2":"Suite 597","city":"London","region":"London","areaCode":"A3G
+        0SL","country":"UK"},"dateOfBirth":"1980-01-01"}],"contactEmailAddress":"oterosantos@gmail.com"}'
+    headers:
+      Authorization:
+      - Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9wcmVxdWFsaWZpY2F0aW9uIiwiaWF0IjoxNjEyMjg1MDc3LCJleHAiOjE2MTIzNzE0NzcsImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.QuF9CeXZk0Bt6mgq6YoLkM43kxL26hc1ybyEmLiLL1hD7BXhhPrNQltmNxyb0vDO088VkA3_BPs64yKX_HjquwtcXhy83Rpv5hWS8ETMdPnTchxH0Vy7Cc6nGxB-48NoFBbyD-HS_wEL6V5_KFf_e-_M_pOxTsf9ubR76eNi309jYy4aS7SCheTz6p_0ro6m12ILyYhR8EXSgtxI_OgGITdbHqk8nql1BdnPCEaaZ5GkRvZaOBSEooNai3YxcuZQkTTh_UkGIVNCA-VzPxNai62iiNWb1DiFRQOZCvSp7yNos4yZvbWo44QO8jPslWuc9Taw-jpoLykvlR0vlXYhhQ
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Api-Supported-Versions:
+      - '1.0'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 02 Feb 2021 16:57:58 GMT
+      Server:
+      - Microsoft-IIS/10.0
+      X-Powered-By:
+      - ASP.NET
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"thirdPartyMerchantId":"b97b0834-74e5-4da6-a3df-c8dbe017fe09","mid":null,"companyName":"Test
+        company","overallCreditRiskScore":3.5,"overrideCreditRiskScore":1.0,"loanOptions":[{"fundedAmount":0.0,"fee":0.00,"loanAmount":0.00,"sweep":0.0,"currencyISOCode":"GBP"},{"fundedAmount":0.0,"fee":0.0,"loanAmount":0.0,"sweep":0.0,"currencyISOCode":"GBP"},{"fundedAmount":0.0,"fee":0.0,"loanAmount":0.0,"sweep":0.0,"currencyISOCode":"GBP"}]}'
+    http_version:
+  recorded_at: Tue, 02 Feb 2021 16:57:58 GMT
+recorded_with: VCR 5.0.0

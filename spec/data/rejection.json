@@ -1,0 +1,71 @@
+{
+  "companyType": "soleTrader",
+  "companyName": "TestCompany",
+  "countryISOCode": "GBR",
+  "loanCurrencyISOCode": "GBP",
+  "thirdPartyMerchantId": "1234",
+  "financialData": {
+    "paymentData": [
+      {
+        "PaymentDate": "2020-10-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-09-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-08-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-07-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-06-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-05-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-04-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-03-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-02-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2020-01-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2019-12-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      },
+      {
+        "PaymentDate": "2019-11-01",
+        "Amount": 50,
+        "currencyISOCode": "GBP"
+      }
+    ]
+  }
+}
