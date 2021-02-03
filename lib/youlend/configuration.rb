@@ -6,7 +6,7 @@ module Youlend
     attr_writer :debug
 
     API_DOMAINS = {
-      production: '',
+      production: 'https://youlendapi.com',
       development: 'https://staging.youlendapi.com'
     }.freeze
 

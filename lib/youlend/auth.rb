@@ -9,7 +9,10 @@ module Youlend
   class Auth
     extend Forwardable
 
-    AUTH_URL = 'https://youlend-stag.eu.auth0.com'
+    AUTH_URLS = {
+      production: 'https://youlend.eu.auth0.com',
+      development: 'https://youlend-stag.eu.auth0.com'
+    }.freeze
 
     AUDIENCES = %i[prequalification onboarding].freeze
     DEFAULT_AUDIENCE = :prequalification
@@ -46,7 +49,9 @@ module Youlend
     private
 
     def adapter
-      Faraday.new(url: AUTH_URL) do |conn|
+      auth_url = AUTH_URLS[Youlend.configuration.env]
+
+      Faraday.new(url: auth_url) do |conn|
         conn.headers['Content-Type'] = 'application/json'
         conn.headers['User-Agent'] = "ruby-youlend-#{VERSION}"
         conn.use FaradayMiddleware::ParseJson
