@@ -163,7 +163,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"thirdPartyMerchantId":"b97b0834-74e5-4da6-a3df-c8dbe017fe09","mid":null,"companyName":"Test
-        company","overallCreditRiskScore":3.5,"overrideCreditRiskScore":1.0,"loanOptions":[{"fundedAmount":0.0,"fee":0.00,"loanAmount":0.00,"sweep":0.0,"currencyISOCode":"GBP"},{"fundedAmount":0.0,"fee":0.0,"loanAmount":0.0,"sweep":0.0,"currencyISOCode":"GBP"},{"fundedAmount":0.0,"fee":0.0,"loanAmount":0.0,"sweep":0.0,"currencyISOCode":"GBP"}]}'
+        company","overallCreditRiskScore":3.5,"overrideCreditRiskScore":1.0,"loanOptions":[{"fundedAmount":100.0,"fee":0.00,"loanAmount":0.00,"sweep":0.0,"currencyISOCode":"GBP"},{"fundedAmount":0.0,"fee":0.0,"loanAmount":0.0,"sweep":0.0,"currencyISOCode":"GBP"},{"fundedAmount":0.0,"fee":0.0,"loanAmount":0.0,"sweep":0.0,"currencyISOCode":"GBP"}]}'
     http_version:
   recorded_at: Tue, 02 Feb 2021 16:57:58 GMT
 recorded_with: VCR 5.0.0
