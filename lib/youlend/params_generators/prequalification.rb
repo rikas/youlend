@@ -16,9 +16,7 @@ module Youlend
       end
 
       # Mandatory fields:
-      # * CompanyName
       # * CompanyType (ltd, plc, llp, dac, partnership, soleTrader, aps, as, ks, ivs and is)
-      # * CompanyNumber
       # * FinancialData
       # * CountryISOCode (GBR, DNK and IRE)
       # * LoanCurrencyISOCode (ISO 4217 currency code. Valid codes are GBP, EUR and DKK)
@@ -28,13 +26,13 @@ module Youlend
       # number, otherwise Youlend needs to ask for permission on credit checks.
       def generate
         {
-          companyName: 'HOKO LTD',
           companyType: 'ltd',
-          companyNumber: '09525857',
           financialData: financial_data,
           countryISOCode: 'GBR',
           loanCurrencyISOCode: 'GBP',
           thirdPartyMerchantId: SecureRandom.uuid,
+          companyName: 'HOKO LTD', # optional
+          companyNumber: '09525857', # optional
           significantPersons: [significant_person],     # optional
           contactEmailAddress: 'oterosantos@gmail.com'  # optional
         }

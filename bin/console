@@ -3,7 +3,7 @@
 
 require 'bundler/setup'
 require 'youlend'
-require 'youlend/params_generators/pre_qualification'
+require 'youlend/params_generators/prequalification'
 require 'youlend/params_generators/lead'
 
 require 'dotenv'
