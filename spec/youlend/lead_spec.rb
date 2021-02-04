@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
-require 'youlend/lead_generator'
+require 'youlend/params_generators/lead'
 
 RSpec.describe Youlend::Lead do
   describe '.create' do
     context 'when the data is correct' do
       it 'returns the data as expected' do
         VCR.use_cassette('lead_create_correct') do
-          lead_params = Youlend::LeadGenerator.generate
+          lead_params = Youlend::ParamsGenerators::Lead.generate
 
           response = described_class.create(lead_params)
 
@@ -20,7 +20,7 @@ RSpec.describe Youlend::Lead do
     context 'when the data is incorrect' do
       it 'returns errors for each field' do
         VCR.use_cassette('lead_create_incorrect') do
-          lead_params = Youlend::LeadGenerator.generate
+          lead_params = Youlend::ParamsGenerators::Lead.generate
           lead_params[:companyType] = 'incorrect'
 
           response = described_class.create(lead_params)

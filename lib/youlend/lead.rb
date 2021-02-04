@@ -3,6 +3,10 @@
 # Following the API description here: https://staging.youlend.com/developer/main/onboardingdoc
 module Youlend
   class Lead
+    def self.create(params)
+      new(params).create
+    end
+
     def initialize(params)
       @id = nil
       @params = params
@@ -10,10 +14,6 @@ module Youlend
 
     def create
       Youlend.connection.post('/onboarding/Leads', :onboarding, @params)
-    end
-
-    def self.create(params)
-      new(params).create
     end
 
     def self.details(lead_id)

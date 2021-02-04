@@ -4,7 +4,7 @@ require 'youlend/version'
 require 'youlend/auth'
 require 'youlend/configuration'
 require 'youlend/connection'
-require 'youlend/quote'
+require 'youlend/prequalification'
 require 'youlend/lead'
 
 module Youlend
