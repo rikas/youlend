@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    youlend (1.1.1)
+    youlend (1.1.2)
       addressable
       faraday
       faraday_middleware
