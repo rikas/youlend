@@ -40,6 +40,14 @@ module Youlend
       Response.new(http_response)
     end
 
+    def get(path, audience)
+      http_response = with_token_refresh(audience) do
+        adapter(audience).get(PathSanitizer.sanitize(path))
+      end
+
+      Response.new(http_response)
+    end
+
     private
 
     def log(text)

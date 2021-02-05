@@ -17,7 +17,14 @@ module Youlend
     end
 
     def self.details(lead_id)
-      Youlend.connection.get("/onboarding/Leads/#{lead_id}/details", :onboarding)
+      Youlend.connection.get("/onboarding/Leads/#{lead_id}", :onboarding)
+    end
+
+    def self.onboard_link(lead_id, email_address)
+      domain = Youlend.configuration.domain
+
+      url = Addressable::Template.new("#{domain}/dashboard/youlendapisignup{?query*}")
+      url.expand(query: { emailAddress: email_address, leadId: lead_id}).to_s
     end
   end
 end
