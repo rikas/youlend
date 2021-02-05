@@ -24,5 +24,15 @@ module Youlend
 
       auth_header.match?(/.*token is expired.*/)
     end
+
+    def errors
+      return [] unless unauthorized? || token_expired?
+
+      @http_response.body
+    end
+
+    def data
+      @http_response.body
+    end
   end
 end

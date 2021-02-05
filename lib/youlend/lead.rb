@@ -24,7 +24,7 @@ module Youlend
       domain = Youlend.configuration.domain
 
       url = Addressable::Template.new("#{domain}/dashboard/youlendapisignup{?query*}")
-      url.expand(query: { emailAddress: email_address, leadId: lead_id}).to_s
+      url.expand(query: { emailAddress: email_address, leadId: lead_id }).to_s
     end
   end
 end
