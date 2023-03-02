@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'faraday'
-require 'faraday_middleware'
 require 'rainbow'
 require 'addressable'
 
@@ -67,7 +66,6 @@ module Youlend
         conn.headers['Authorization'] = "Bearer #{token}" unless token.to_s.empty?
         conn.headers['Content-Type'] = 'application/json'
         conn.headers['User-Agent'] = "ruby-youlend-#{VERSION}"
-        conn.use FaradayMiddleware::ParseJson
         conn.response :json, parser_options: { symbolize_names: true }
         conn.response :logger if Youlend.configuration.debug?
         conn.adapter Faraday.default_adapter

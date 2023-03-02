@@ -38,7 +38,7 @@ RSpec.describe Youlend::Prequalification do
       it 'returns an error message' do
         VCR.use_cassette('prequalification_rejection') do
           data = File.open(File.join(__dir__, '../data/rejection.json')).read
-          params = MultiJson.load(data, symbolize_keys: true)
+          params = JSON.parse(data, symbolize_names: true)
 
           response = described_class.verify(params)
 

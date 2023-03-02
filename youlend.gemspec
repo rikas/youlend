@@ -27,20 +27,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'addressable'
-  spec.add_dependency 'faraday'
-  spec.add_dependency 'faraday_middleware'
-  spec.add_dependency 'multi_json'
+  spec.add_dependency 'faraday', '~> 2.7'
   spec.add_dependency 'rainbow'
-
-  spec.add_development_dependency 'bundler'
-  spec.add_development_dependency 'dotenv'
-  spec.add_development_dependency 'faker'
-  spec.add_development_dependency 'pry-byebug'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'rubocop-rspec'
-  spec.add_development_dependency 'simplecov'
-  spec.add_development_dependency 'vcr'
-  spec.add_development_dependency 'webmock'
 end
