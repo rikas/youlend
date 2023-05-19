@@ -32,7 +32,7 @@ module Youlend
         grant_type: 'client_credentials',
         client_id: client_id,
         client_secret: client_secret,
-        audience: "#{Youlend.configuration.api_domain}/#{audience}"
+        audience: "#{Youlend.configuration.domain}/#{audience}"
       }
 
       result = adapter.post('/oauth/token', params.to_json)

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://staging.youlendapi.com/onboarding/Leads/
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/
     body:
       encoding: UTF-8
       string: '{"companyName":"HOKO LTD","companyType":"incorrect","monthsTrading":6,"countryISOCode":"GBR","keyContactName":"Johnny
@@ -125,7 +125,7 @@ http_interactions:
   recorded_at: Tue, 02 Feb 2021 13:39:40 GMT
 - request:
     method: post
-    uri: https://staging.youlendapi.com/onboarding/Leads/
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/
     body:
       encoding: UTF-8
       string: '{"companyName":"HOKO LTD","companyType":"incorrect","monthsTrading":6,"countryISOCode":"GBR","keyContactName":"Johnny

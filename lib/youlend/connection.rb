@@ -39,6 +39,16 @@ module Youlend
       Response.new(http_response)
     end
 
+    def put(path, audience, params = {})
+      log "PUT: #{params.inspect}"
+
+      http_response = with_token_refresh(audience) do
+        adapter(audience).put(PathSanitizer.sanitize(path), params.to_json)
+      end
+
+      Response.new(http_response)
+    end
+
     def get(path, audience)
       http_response = with_token_refresh(audience) do
         adapter(audience).get(PathSanitizer.sanitize(path))
