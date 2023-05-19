@@ -35,7 +35,9 @@ VCR.configure do |config|
   end
 
   config.filter_sensitive_data('<TOKEN>') do |interaction|
-    interaction.response.body if interaction.response.body.match?(/access_token/)
+    if interaction.response.body.match?(/access_token/)
+      JSON.parse(interaction.response.body)['access_token']
+    end
   end
 end
 

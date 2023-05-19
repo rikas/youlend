@@ -80,7 +80,7 @@ http_interactions:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"","expires_in":86400,"token_type":"Bearer"}'
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJ","expires_in":86400,"token_type":"Bearer"}'
     http_version:
   recorded_at: Tue, 02 Feb 2021 13:24:56 GMT
 recorded_with: VCR 5.0.0

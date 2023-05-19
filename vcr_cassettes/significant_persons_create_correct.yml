@@ -39,7 +39,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
+    http_version:
   recorded_at: Fri, 19 May 2023 10:33:16 GMT
 - request:
     method: post
@@ -119,8 +119,8 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: "<TOKEN>"
-    http_version: 
+      string: '{"access_token":"<TOKEN>","expires_in":86400,"token_type":"Bearer"}'
+    http_version:
   recorded_at: Fri, 19 May 2023 10:33:16 GMT
 - request:
     method: put
@@ -165,6 +165,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"leadId":"620fb657-cff2-4e21-98d8-457b7c17b9bc","significantPersonIds":["5142a132-2aaf-4789-8e40-7e8597ff625a"]}'
-    http_version: 
+    http_version:
   recorded_at: Fri, 19 May 2023 10:33:16 GMT
 recorded_with: VCR 5.0.0
