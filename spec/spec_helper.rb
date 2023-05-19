@@ -29,6 +29,14 @@ VCR.configure do |config|
   config.filter_sensitive_data('<CLIENT_SECRET>') do
     ENV['YOULEND_CLIENT_SECRET']
   end
+
+  config.filter_sensitive_data('<Bearer>') do |interaction|
+    interaction.request.headers['Authorization']&.first
+  end
+
+  config.filter_sensitive_data('<TOKEN>') do |interaction|
+    interaction.response.body if interaction.response.body.match?(/access_token/)
+  end
 end
 
 RSpec.configure do |config|

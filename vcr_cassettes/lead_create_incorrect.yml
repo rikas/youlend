@@ -120,7 +120,7 @@ http_interactions:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9vbmJvYXJkaW5nIiwiaWF0IjoxNjEyMjczMTgwLCJleHAiOjE2MTIzNTk1ODAsImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.tbDpCfvp_Drgl_nh13-AM_LXw9HB8IPBaptrzDifhpb7HUh7MES6YRDoa6HQ4nltSKQ9d45BNOs1XntTZfGYSm-0Zs0Jn45iLkqrClP4uAfF9UQ57mf2pcqB60_EI4K3ZoWhD3n8ZyZR4zkcErwir_cDlm-uGh-KgG66AMJF8kPZX9IJrKoUeFHrTrarF3bjIuXbZWcbkR1YhM0ZMQKRVFJfj7KfWIkQt4nKpf37qZoLyxQMBOoY3xqDf83-wOPREKDSDDiVAnIqbCSTTMdcdTzO02jai5bTxWvgHBNYBtVK-CGOG69guW0wn6JgG1I9v_tjKilHBwlGjUjT_r-QVA","expires_in":86400,"token_type":"Bearer"}'
+      string: '{"access_token":"","expires_in":86400,"token_type":"Bearer"}'
     http_version:
   recorded_at: Tue, 02 Feb 2021 13:39:40 GMT
 - request:
