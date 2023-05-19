@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/620fb657-cff2-4e21-98d8-457b7c17b9bc/significantpersons/
+    body:
+      encoding: UTF-8
+      string: '{"significantPersons":[{"typeOfPerson":"Director","address":{"line1":"6210
+        Johnston Roads","line2":"Apt. 329","city":"London","region":"London","areaCode":"88478","country":"GBR"},"dateOfBirth":{"year":2000,"month":1,"day":1},"firstName":"","surname":"Klocko","emailAddress":"gerry@heathcotegleason.biz","mobilePhoneNumber":"185-714-9786
+        x35247","percentageOwned":52,"nationality":"Barbadians"}]}'
+    headers:
+      Authorization:
+      - "<Bearer>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Date:
+      - Fri, 19 May 2023 10:33:17 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: '{"SignificantPersons[0].FirstName":["''First Name'' must not be empty.","The
+        specified condition was not met for ''First Name''."]}'
+    http_version: 
+  recorded_at: Fri, 19 May 2023 10:33:17 GMT
+recorded_with: VCR 5.0.0
