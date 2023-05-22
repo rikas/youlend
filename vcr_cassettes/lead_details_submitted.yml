@@ -1,0 +1,167 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/0f9b892f-3816-4afe-a582-1ce0ea708fdb/details/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Fri, 19 May 2023 12:45:05 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Www-Authenticate:
+      - Bearer
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 19 May 2023 12:45:05 GMT
+- request:
+    method: post
+    uri: https://youlend-stag.eu.auth0.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials","client_id":"<CLIENT_ID>","client_secret":"<CLIENT_SECRET>","audience":"https://staging.youlendapi.com/onboarding"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 19 May 2023 12:45:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7c9c6f5f7ff60eb0-AMS
+      Cache-Control:
+      - no-store
+      Set-Cookie:
+      - __cf_bm=L2anJENPJMFiIsubxB3wmzBQdC0tFBoJLw03iH.F89Q-1684500305-0-AVtRuWqtkBfsHFxTl5ihLJ/GgIXvwx1gIB379mPO03uqljQMOEeftN7n837ZF2FfuK6MYfyY+XDUleZ4nJQRZlI=;
+        path=/; expires=Fri, 19-May-23 13:15:05 GMT; domain=.eu.auth0.com; HttpOnly;
+        Secure; SameSite=None
+      - did=s%3Av0%3Afb120510-f642-11ed-97e9-799192b0fb40.mIP3uIeoid%2Fqd0tV%2FjOnaXhVzVWGeXkUuEzDGYVLw1o;
+        Max-Age=31557600; Path=/; Expires=Sat, 18 May 2024 18:45:05 GMT; HttpOnly;
+        Secure; SameSite=None
+      - did_compat=s%3Av0%3Afb120510-f642-11ed-97e9-799192b0fb40.mIP3uIeoid%2Fqd0tV%2FjOnaXhVzVWGeXkUuEzDGYVLw1o;
+        Max-Age=31557600; Path=/; Expires=Sat, 18 May 2024 18:45:05 GMT; HttpOnly;
+        Secure
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding, Origin
+      Cf-Cache-Status:
+      - DYNAMIC
+      Ot-Baggage-Auth0-Request-Id:
+      - 7c9c6f5f7ff60eb0
+      Ot-Tracer-Sampled:
+      - 'true'
+      Ot-Tracer-Spanid:
+      - 6805bed5350c59d4
+      Ot-Tracer-Traceid:
+      - 4bdc491648ce08d1
+      Pragma:
+      - no-cache
+      Traceparent:
+      - 00-00000000000000004bdc491648ce08d1-6805bed5350c59d4-01
+      Tracestate:
+      - auth0-request-id=7c9c6f5f7ff60eb0,auth0=true
+      X-Auth0-Requestid:
+      - 19c7e34ca7a5ed0872d8
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '29'
+      X-Ratelimit-Reset:
+      - '1684500306'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<TOKEN>","expires_in":86400,"token_type":"Bearer"}'
+    http_version: 
+  recorded_at: Fri, 19 May 2023 12:45:06 GMT
+- request:
+    method: get
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/0f9b892f-3816-4afe-a582-1ce0ea708fdb/details/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - "<Bearer>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 19 May 2023 12:45:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Api-Supported-Versions:
+      - '1.0'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: '{"leadSourceLendingPartnerId":"2487faad-24c3-40ed-8e63-f4551555116a","onboardingState":"stage1submitted","onboardingStateReason":"","organisationDetailsStepComplete":false,"paymentDataStepComplete":true,"offerStepComplete":false,"kycDocumentsStepComplete":true,"companyName":"HOKO
+        LTD","leadType":"Api","signingDetails":{"eligibleForInstantSigning":false,"instantSigningDetails":null}}'
+    http_version: 
+  recorded_at: Fri, 19 May 2023 12:45:06 GMT
+recorded_with: VCR 5.0.0

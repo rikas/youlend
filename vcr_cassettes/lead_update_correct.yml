@@ -1,0 +1,170 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/fd984430-4042-4f32-afb2-35700d1564b2/organisationdetails/
+    body:
+      encoding: UTF-8
+      string: '{"companyName":"HOKO LTD","companyType":"ltd","monthsTrading":9,"countryISOCode":"GBR","country":"GBR","keyContactName":"Mrs.
+        Errol Hilpert","thirdPartyLeadId":"0b768d9b-1c3c-4cac-8b71-22088707a76b","registeredAddress":{"line1":"3566
+        Orn Rapid","line2":"Apt. 435","city":"London","region":"London","areaCode":"Y5W
+        9JL","country":"GBR"},"contactPhoneNumber":"055 7386 9337","contactEmailAddress":"rueben.monahan@hagenes.co","loanCurrencyISOCode":"GBP","thirdPartyCustomerId":"0304e8b3-4803-4740-9847-add4896773d6","description":"desc","companyNumber":"09525857","notificationURL":"http://millerohara.info/anjelica.rowe","thirdPartyMerchantId":"989fae99-38fd-402c-a6ac-459492eec617"}'
+    headers:
+      Authorization:
+      - "<Bearer>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Fri, 19 May 2023 12:20:24 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Www-Authenticate:
+      - Bearer error="invalid_token"
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 19 May 2023 12:20:24 GMT
+- request:
+    method: post
+    uri: https://youlend-stag.eu.auth0.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials","client_id":"<CLIENT_ID>","client_secret":"<CLIENT_SECRET>","audience":"https://staging.youlendapi.com/onboarding"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 19 May 2023 12:20:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7c9c4b34bc941cba-AMS
+      Cache-Control:
+      - no-store
+      Set-Cookie:
+      - __cf_bm=3XbXs3cF2NLXlejfkJSiqsBDxmv23NTr2lMEvMxHTpU-1684498824-0-AVT1c/A9wzr1uDvqM5Z2eEu47E30zwWVnO4Lqi/Dozh0LjvE8hkRI0snOcasEO2LgaSr3hWNlegA7dryYaUhkwg=;
+        path=/; expires=Fri, 19-May-23 12:50:24 GMT; domain=.eu.auth0.com; HttpOnly;
+        Secure; SameSite=None
+      - did=s%3Av0%3A88178a10-f63f-11ed-be4c-ff6f99b3f517.z3BnWyqWPw0Kep6EYLbXlimeifcWeUlV9RScnINvYvE;
+        Max-Age=31557600; Path=/; Expires=Sat, 18 May 2024 18:20:24 GMT; HttpOnly;
+        Secure; SameSite=None
+      - did_compat=s%3Av0%3A88178a10-f63f-11ed-be4c-ff6f99b3f517.z3BnWyqWPw0Kep6EYLbXlimeifcWeUlV9RScnINvYvE;
+        Max-Age=31557600; Path=/; Expires=Sat, 18 May 2024 18:20:24 GMT; HttpOnly;
+        Secure
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding, Origin
+      Cf-Cache-Status:
+      - DYNAMIC
+      Ot-Baggage-Auth0-Request-Id:
+      - 7c9c4b34bc941cba
+      Ot-Tracer-Sampled:
+      - 'true'
+      Ot-Tracer-Spanid:
+      - 1229792a43573e0e
+      Ot-Tracer-Traceid:
+      - 2f67a33757312b24
+      Pragma:
+      - no-cache
+      Traceparent:
+      - 00-00000000000000002f67a33757312b24-1229792a43573e0e-01
+      Tracestate:
+      - auth0-request-id=7c9c4b34bc941cba,auth0=true
+      X-Auth0-Requestid:
+      - dce22720940c592766ad
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '29'
+      X-Ratelimit-Reset:
+      - '1684498825'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"access_token":"<TOKEN>","expires_in":86400,"token_type":"Bearer"}'
+    http_version: 
+  recorded_at: Fri, 19 May 2023 12:20:24 GMT
+- request:
+    method: put
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/fd984430-4042-4f32-afb2-35700d1564b2/organisationdetails/
+    body:
+      encoding: UTF-8
+      string: '{"companyName":"HOKO LTD","companyType":"ltd","monthsTrading":9,"countryISOCode":"GBR","country":"GBR","keyContactName":"Mrs.
+        Errol Hilpert","thirdPartyLeadId":"0b768d9b-1c3c-4cac-8b71-22088707a76b","registeredAddress":{"line1":"3566
+        Orn Rapid","line2":"Apt. 435","city":"London","region":"London","areaCode":"Y5W
+        9JL","country":"GBR"},"contactPhoneNumber":"055 7386 9337","contactEmailAddress":"rueben.monahan@hagenes.co","loanCurrencyISOCode":"GBP","thirdPartyCustomerId":"0304e8b3-4803-4740-9847-add4896773d6","description":"desc","companyNumber":"09525857","notificationURL":"http://millerohara.info/anjelica.rowe","thirdPartyMerchantId":"989fae99-38fd-402c-a6ac-459492eec617"}'
+    headers:
+      Authorization:
+      - "<Bearer>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Date:
+      - Fri, 19 May 2023 12:20:24 GMT
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Api-Supported-Versions:
+      - '1.0'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 19 May 2023 12:20:24 GMT
+recorded_with: VCR 5.0.0

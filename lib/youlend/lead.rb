@@ -4,20 +4,15 @@
 module Youlend
   class Lead
     def self.create(params)
-      new(params).create
+      Youlend.connection.post('/onboarding/Leads', :onboarding, params)
     end
 
-    def initialize(params)
-      @id = nil
-      @params = params
-    end
-
-    def create
-      Youlend.connection.post('/onboarding/Leads', :onboarding, @params)
+    def self.update(lead_id, params)
+      Youlend.connection.put("/onboarding/Leads/#{lead_id}/organisationdetails", :onboarding, params)
     end
 
     def self.details(lead_id)
-      Youlend.connection.get("/onboarding/Leads/#{lead_id}", :onboarding)
+      Youlend.connection.get("/onboarding/Leads/#{lead_id}/details", :onboarding)
     end
 
     def self.onboard_link(lead_id, email_address)

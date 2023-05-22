@@ -34,14 +34,16 @@ module Youlend
           companyType: 'ltd',
           monthsTrading: rand(3..10),
           countryISOCode: 'GBR',
+          country: 'GBR',
           keyContactName: Faker::Name.name,
           thirdPartyLeadId: SecureRandom.uuid,
           registeredAddress: address,
           contactPhoneNumber: Faker::PhoneNumber.phone_number,
-          monthlyCardRevenue: 10_000,
+          # monthlyCardRevenue: 10_000,
           contactEmailAddress: Faker::Internet.email,
           loanCurrencyISOCode: 'GBP',
           thirdPartyCustomerId: SecureRandom.uuid,
+          description: 'desc',
           companyNumber: '09525857',                # optional
           notificationURL: Faker::Internet.url,     # optional
           thirdPartyMerchantId: SecureRandom.uuid   # optional
@@ -57,7 +59,7 @@ module Youlend
           city: 'London',
           region: 'London',
           areaCode: Faker::Address.zip_code,
-          country: 'UK'
+          country: 'GBR'
         }
       end
     end

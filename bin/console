@@ -5,6 +5,7 @@ require 'bundler/setup'
 require 'youlend'
 require 'youlend/params_generators/prequalification'
 require 'youlend/params_generators/lead'
+require 'youlend/params_generators/significant_persons'
 
 require 'dotenv'
 Dotenv.load
