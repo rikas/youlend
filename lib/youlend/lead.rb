@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Following the API description here: https://staging.youlend.com/developer/main/onboardingdoc
+# Following the API description here: https://docs.youlend.com/reference/onboarding-intro
 module Youlend
   class Lead
     def self.create(params)
@@ -13,6 +13,14 @@ module Youlend
 
     def self.details(lead_id)
       Youlend.connection.get("/onboarding/Leads/#{lead_id}/details", :onboarding)
+    end
+
+    def self.offers(lead_id)
+      Youlend.connection.get("/onboarding/Leads/#{lead_id}/offers", :onboarding)
+    end
+
+    def self.accept_offer(lead_id, offer_id)
+      Youlend.connection.post("/onboarding/Leads/#{lead_id}/offers/#{offer_id}/acceptance", :onboarding)
     end
 
     def self.onboard_link(lead_id, email_address)
