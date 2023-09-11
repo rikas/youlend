@@ -80,7 +80,7 @@ http_interactions:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9vbmJvYXJkaW5nIiwiaWF0IjoxNjEyMjcyMjk3LCJleHAiOjE2MTIzNTg2OTcsImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.lcYAhbXgtTnOBE528d5mPu7CD_FUefSnRwIK9u1rdg-CcRCflLmesALTJjS-VbE0kotT_PAU9n2CuLAbsK3XbORkg8doxKZG_1mNeSxuqCYrcd-nOPtxnKUXuRrCIZoogzmt9gt350skue_6YSKVjqeqeGetzyOdoitiJEms2rkuzMqkfNlTqouXKjYKHFIG6tUg4oBUlrvjwDvAXaLmZIyxpSkihrqCG2_5cvzrmtZmffwJvFtPVYKyufgtZm66NIPiitw_NfTtcU1ZggPBgJyjjGJKL6XD--mJqoaGEzWUncyJEOuONmqm_m_H0LuCfb5OQMLkDbQuqo_fwsixfA","expires_in":86400,"token_type":"Bearer"}'
+      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cdI6IkcXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJ","expires_in":86400,"token_type":"Bearer"}'
     http_version:
   recorded_at: Tue, 02 Feb 2021 13:24:57 GMT
 recorded_with: VCR 5.0.0

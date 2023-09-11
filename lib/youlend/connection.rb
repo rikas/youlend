@@ -12,6 +12,12 @@ module Youlend
     BASE_PATH = '/'
 
     def with_token_refresh(audience)
+      if token_for(audience).to_s.empty?
+        log "Refreshing outdated token... #{Youlend.configuration.tokens[audience]}"
+
+        Auth.request_token(audience)
+      end
+
       http_response = yield
 
       response = Response.new(http_response)
@@ -39,6 +45,16 @@ module Youlend
       Response.new(http_response)
     end
 
+    def put(path, audience, params = {})
+      log "PUT: #{params.inspect}"
+
+      http_response = with_token_refresh(audience) do
+        adapter(audience).put(PathSanitizer.sanitize(path), params.to_json)
+      end
+
+      Response.new(http_response)
+    end
+
     def get(path, audience)
       http_response = with_token_refresh(audience) do
         adapter(audience).get(PathSanitizer.sanitize(path))
@@ -59,8 +75,12 @@ module Youlend
       Addressable::URI.join(Youlend.configuration.api_domain, BASE_PATH).to_s
     end
 
+    def token_for(audience)
+      Youlend.configuration.tokens[audience]
+    end
+
     def adapter(audience)
-      token = Youlend.configuration.tokens[audience]
+      token = token_for(audience)
 
       Faraday.new(url: base_url) do |conn|
         conn.headers['Authorization'] = "Bearer #{token}" unless token.to_s.empty?

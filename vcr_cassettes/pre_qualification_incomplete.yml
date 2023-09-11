@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://staging.youlendapi.com/prequalification/Requests/
+    uri: https://partners.staging-youlendapi.com/prequalification/Requests/
     body:
       encoding: UTF-8
       string: "{}"

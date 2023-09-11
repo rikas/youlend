@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://staging.youlendapi.com/prequalification/Requests/
+    uri: https://partners.staging-youlendapi.com/prequalification/Requests/
     body:
       encoding: UTF-8
       string: '{"companyType":"soleTrader","companyName":"TestCompany","countryISOCode":"GBR","loanCurrencyISOCode":"GBP","thirdPartyMerchantId":"1234","financialData":{"paymentData":[{"PaymentDate":"2020-10-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-09-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-08-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-07-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-06-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-05-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-04-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-03-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-02-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-01-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2019-12-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2019-11-01","Amount":50,"currencyISOCode":"GBP"}]}}'
@@ -117,12 +117,12 @@ http_interactions:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9wcmVxdWFsaWZpY2F0aW9uIiwiaWF0IjoxNjEyMzYyOTg2LCJleHAiOjE2MTI0NDkzODYsImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.oJMaLz4MjPJ1vkHM8iH9KsaQavTaMmYwfku6TZ9J27a69zBCRfQmq-5yh7pi0pwQBaZF3e_XqOKZ54ZOZ_5SXssEXUS-G9g1o4czuHPkKhUWlB3ZXBDvvmO4XiKgkBcf3oU4WTHalmGFXbm2NA9Wa2GycTvzt1i8d5QTETKmF8lxrM_cjXWk2dud5d1jjGRaPY5XKu0on_zZvFRw1-3OzcbbCry_aPbdnha0_x40wPXhmfbxEf142MYr05Fc5P8dL_gtHqK21BIdX-isgdllLhcQiPYBveyTG7-NFdIkz1wFSbtzKN59Kf7qGS6tXJaDwTlr4nMZdz_DhTU2wYewqg","expires_in":86400,"token_type":"Bearer"}'
+      string: '{"access_token":"","expires_in":86400,"token_type":"Bearer"}'
     http_version:
   recorded_at: Wed, 03 Feb 2021 14:36:26 GMT
 - request:
     method: post
-    uri: https://staging.youlendapi.com/prequalification/Requests/
+    uri: https://partners.staging-youlendapi.com/prequalification/Requests/
     body:
       encoding: UTF-8
       string: '{"companyType":"soleTrader","companyName":"TestCompany","countryISOCode":"GBR","loanCurrencyISOCode":"GBP","thirdPartyMerchantId":"1234","financialData":{"paymentData":[{"PaymentDate":"2020-10-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-09-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-08-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-07-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-06-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-05-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-04-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-03-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-02-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2020-01-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2019-12-01","Amount":50,"currencyISOCode":"GBP"},{"PaymentDate":"2019-11-01","Amount":50,"currencyISOCode":"GBP"}]}}'

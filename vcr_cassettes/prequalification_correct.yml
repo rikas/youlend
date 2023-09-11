@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://staging.youlendapi.com/prequalification/Requests/
+    uri: https://partners.staging-youlendapi.com/prequalification/Requests/
     body:
       encoding: UTF-8
       string: '{"companyName":"Test company","companyType":"ltd","companyNumber":"09525857","financialData":{"monthlyCardRevenue":0,"monthlyValueOfPurchaseTransactions":0,"monthlyRevenueFromInvoices":0,"paymentData":[{"paymentDate":"2020-01-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-02-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-03-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-04-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-05-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-06-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-07-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-08-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-09-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-10-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-11-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-12-01","amount":5000,"currencyISOCode":"GBP"}]},"countryISOCode":"GBR","loanCurrencyISOCode":"GBP","thirdPartyMerchantId":"b97b0834-74e5-4da6-a3df-c8dbe017fe09","significantPersons":[{"firstName":"Jarrett","surname":"Hauck","address":{"line1":"95590
@@ -119,12 +119,12 @@ http_interactions:
       - h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik0wUXdOMEl5TnpRMVJrRXhNa1pGTlVWRU5UQTJRalV6UWtRMVJUY3dORE0xUVVVM05rTkVRZyJ9.eyJodHRwOi8veW91bGVuZC5jb20vY2xhaW1zL2xlbmRpbmdQYXJ0bmVySWQiOiJkOGJmZTcwMy1lODBlLTRlMzUtYmFhYS1mZDk2MWU3ZGZlZTkiLCJpc3MiOiJodHRwczovL3lvdWxlbmQtc3RhZy5ldS5hdXRoMC5jb20vIiwic3ViIjoidXpLVEcyQ0NBZkFZQ0pGU0I3N3ZXRlVOelVOOHZxdlhAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vc3RhZ2luZy55b3VsZW5kYXBpLmNvbS9wcmVxdWFsaWZpY2F0aW9uIiwiaWF0IjoxNjEyMjg1MDc3LCJleHAiOjE2MTIzNzE0NzcsImF6cCI6InV6S1RHMkNDQWZBWUNKRlNCNzd2V0ZVTnpVTjh2cXZYIiwiZ3R5IjoiY2xpZW50LWNyZWRlbnRpYWxzIn0.QuF9CeXZk0Bt6mgq6YoLkM43kxL26hc1ybyEmLiLL1hD7BXhhPrNQltmNxyb0vDO088VkA3_BPs64yKX_HjquwtcXhy83Rpv5hWS8ETMdPnTchxH0Vy7Cc6nGxB-48NoFBbyD-HS_wEL6V5_KFf_e-_M_pOxTsf9ubR76eNi309jYy4aS7SCheTz6p_0ro6m12ILyYhR8EXSgtxI_OgGITdbHqk8nql1BdnPCEaaZ5GkRvZaOBSEooNai3YxcuZQkTTh_UkGIVNCA-VzPxNai62iiNWb1DiFRQOZCvSp7yNos4yZvbWo44QO8jPslWuc9Taw-jpoLykvlR0vlXYhhQ","expires_in":86400,"token_type":"Bearer"}'
+      string: '{"access_token":"","expires_in":86400,"token_type":"Bearer"}'
     http_version:
   recorded_at: Tue, 02 Feb 2021 16:57:57 GMT
 - request:
     method: post
-    uri: https://staging.youlendapi.com/prequalification/Requests/
+    uri: https://partners.staging-youlendapi.com/prequalification/Requests/
     body:
       encoding: UTF-8
       string: '{"companyName":"Test company","companyType":"ltd","companyNumber":"09525857","financialData":{"monthlyCardRevenue":0,"monthlyValueOfPurchaseTransactions":0,"monthlyRevenueFromInvoices":0,"paymentData":[{"paymentDate":"2020-01-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-02-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-03-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-04-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-05-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-06-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-07-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-08-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-09-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-10-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-11-01","amount":5000,"currencyISOCode":"GBP"},{"paymentDate":"2020-12-01","amount":5000,"currencyISOCode":"GBP"}]},"countryISOCode":"GBR","loanCurrencyISOCode":"GBP","thirdPartyMerchantId":"b97b0834-74e5-4da6-a3df-c8dbe017fe09","significantPersons":[{"firstName":"Jarrett","surname":"Hauck","address":{"line1":"95590

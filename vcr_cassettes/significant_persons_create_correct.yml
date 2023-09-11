@@ -1,0 +1,170 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/620fb657-cff2-4e21-98d8-457b7c17b9bc/significantpersons/
+    body:
+      encoding: UTF-8
+      string: '{"significantPersons":[{"typeOfPerson":"Director","address":{"line1":"9381
+        Dietrich Avenue","line2":"Suite 306","city":"London","region":"London","areaCode":"89863","country":"GBR"},"dateOfBirth":{"year":2000,"month":1,"day":1},"firstName":"Rey","surname":"Weimann","emailAddress":"clarence@weinatrobel.io","mobilePhoneNumber":"656-096-3334
+        x6280","percentageOwned":45,"nationality":"Russians"}]}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Fri, 19 May 2023 10:33:16 GMT
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Www-Authenticate:
+      - Bearer
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version:
+  recorded_at: Fri, 19 May 2023 10:33:16 GMT
+- request:
+    method: post
+    uri: https://youlend-stag.eu.auth0.com/oauth/token
+    body:
+      encoding: UTF-8
+      string: '{"grant_type":"client_credentials","client_id":"<CLIENT_ID>","client_secret":"<CLIENT_SECRET>","audience":"https://staging.youlendapi.com/onboarding"}'
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 19 May 2023 10:33:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 7c9bae44ace506dc-AMS
+      Cache-Control:
+      - no-store
+      Set-Cookie:
+      - __cf_bm=8DANQHcjx784g6gd3WWw8w6AClbeO8ceSVOxHjnxEco-1684492396-0-AcKj8EKJdK+GYsRjiAb/lQCzKvju95EO73ZI5cQQoL3TkEk/tZINN5Q/0E7n7Tf106wZwD3LpkOm+85DHRTIyP4=;
+        path=/; expires=Fri, 19-May-23 11:03:16 GMT; domain=.eu.auth0.com; HttpOnly;
+        Secure; SameSite=None
+      - did=s%3Av0%3A909b18a0-f630-11ed-97e9-799192b0fb40.ZOoPfMsU7o6NWci0i98JyS%2FEeJvFr5c49%2B%2FQR82zNsU;
+        Max-Age=31557600; Path=/; Expires=Sat, 18 May 2024 16:33:16 GMT; HttpOnly;
+        Secure; SameSite=None
+      - did_compat=s%3Av0%3A909b18a0-f630-11ed-97e9-799192b0fb40.ZOoPfMsU7o6NWci0i98JyS%2FEeJvFr5c49%2B%2FQR82zNsU;
+        Max-Age=31557600; Path=/; Expires=Sat, 18 May 2024 16:33:16 GMT; HttpOnly;
+        Secure
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding, Origin
+      Cf-Cache-Status:
+      - DYNAMIC
+      Ot-Baggage-Auth0-Request-Id:
+      - 7c9bae44ace506dc
+      Ot-Tracer-Sampled:
+      - 'true'
+      Ot-Tracer-Spanid:
+      - 29fa8cf73ddf0950
+      Ot-Tracer-Traceid:
+      - 11a9eabb43f0064e
+      Pragma:
+      - no-cache
+      Traceparent:
+      - 00-000000000000000011a9eabb43f0064e-29fa8cf73ddf0950-01
+      Tracestate:
+      - auth0-request-id=7c9bae44ace506dc,auth0=true
+      X-Auth0-Requestid:
+      - 3a59e68b28de7c373462
+      X-Content-Type-Options:
+      - nosniff
+      X-Ratelimit-Limit:
+      - '30'
+      X-Ratelimit-Remaining:
+      - '29'
+      X-Ratelimit-Reset:
+      - '1684492397'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"<TOKEN>","expires_in":86400,"token_type":"Bearer"}'
+    http_version:
+  recorded_at: Fri, 19 May 2023 10:33:16 GMT
+- request:
+    method: put
+    uri: https://partners.staging-youlendapi.com/onboarding/Leads/620fb657-cff2-4e21-98d8-457b7c17b9bc/significantpersons/
+    body:
+      encoding: UTF-8
+      string: '{"significantPersons":[{"typeOfPerson":"Director","address":{"line1":"9381
+        Dietrich Avenue","line2":"Suite 306","city":"London","region":"London","areaCode":"89863","country":"GBR"},"dateOfBirth":{"year":2000,"month":1,"day":1},"firstName":"Rey","surname":"Weimann","emailAddress":"clarence@weinatrobel.io","mobilePhoneNumber":"656-096-3334
+        x6280","percentageOwned":45,"nationality":"Russians"}]}'
+    headers:
+      Authorization:
+      - "<Bearer>"
+      Content-Type:
+      - application/json
+      User-Agent:
+      - ruby-youlend-1.1.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 19 May 2023 10:33:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Server:
+      - Microsoft-IIS/10.0
+      Api-Supported-Versions:
+      - '1.0'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Powered-By:
+      - ASP.NET
+    body:
+      encoding: UTF-8
+      string: '{"leadId":"620fb657-cff2-4e21-98d8-457b7c17b9bc","significantPersonIds":["5142a132-2aaf-4789-8e40-7e8597ff625a"]}'
+    http_version:
+  recorded_at: Fri, 19 May 2023 10:33:16 GMT
+recorded_with: VCR 5.0.0

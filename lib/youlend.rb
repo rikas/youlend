@@ -6,6 +6,7 @@ require 'youlend/configuration'
 require 'youlend/connection'
 require 'youlend/prequalification'
 require 'youlend/lead'
+require 'youlend/significant_persons'
 
 module Youlend
   module_function
